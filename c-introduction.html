@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to C Programming</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3, h4 {
+            color: #333; /* Darker color for headings */
+        }
+
+        p, li {
+            color: #444; /* Darker color for paragraphs and list items */
+        }
+
+        pre {
+            background: #f8f8f8;
+            border-left: 4px solid #007bff;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            color: #c7254e; /* Color for code */
+            background-color: #f9f2f4; /* Light background for code */
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #2a5298;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            background-color: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to C Programming</h1>
+    </header>
+
+    <section>
+        <h2>1. Introduction to Programming</h2>
+        <p>Programming is the process of designing and building executable computer software to accomplish a specific task...</p>
+
+        <h2>2. What is a Programming Language?</h2>
+        <p>A programming language is a formal language comprising a set of instructions that can be used to produce various kinds of output...</p>
+
+        <h2>3. What is Coding?</h2>
+        <p>Coding, or programming, is the act of writing code in a programming language to create software programs...</p>
+
+        <h2>4. What is C?</h2>
+        <p>C is a high-level programming language that was developed in the early 1970s by Dennis Ritchie at Bell Labs...</p>
+
+        <h2>5. Applications of C Language</h2>
+        <ul>
+            <li><strong>System Programming:</strong> C is used to develop system software...</li>
+            <li><strong>Embedded Systems:</strong> It is extensively used in embedded systems...</li>
+            <li><strong>Game Development:</strong> Many games are developed using C/C++ for performance...</li>
+            <li><strong>Database Management:</strong> C is used to implement database systems...</li>
+            <li><strong>Graphics and GUI:</strong> C provides libraries for graphics programming...</li>
+        </ul>
+
+        <h2>6. Why Learn C?</h2>
+        <ul>
+            <li><strong>Foundation for Other Languages:</strong> C is the basis for many modern programming languages...</li>
+            <li><strong>Efficiency:</strong> C programs are often faster and more efficient...</li>
+            <li><strong>Control:</strong> C allows low-level access to memory and hardware...</li>
+            <li><strong>Portability:</strong> C programs can be compiled and run on various platforms...</li>
+        </ul>
+
+        <h2>7. Key Points About C</h2>
+        <ul>
+            <li><strong>Structured Language:</strong> C follows a structured programming paradigm...</li>
+            <li><strong>Case-Sensitive:</strong> C distinguishes between uppercase and lowercase letters...</li>
+            <li><strong>Rich Library:</strong> C has a rich set of built-in functions and libraries...</li>
+            <li><strong>Modularity:</strong> C allows the division of programs into functions...</li>
+        </ul>
+
+        <h2>8. First C Program</h2>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\\n");
+    return 0;
+}</code></pre>
+
+        <h3>Explanation:</h3>
+        <ul>
+            <li><code>#include &lt;stdio.h&gt;</code>: This line includes the standard input-output library...</li>
+            <li><code>int main()</code>: This is the main function where the program execution begins...</li>
+            <li><code>printf("Hello, World!\\n");</code>: This line prints "Hello, World!" to the console...</li>
+            <li><code>return 0;</code>: This statement indicates that the program ended successfully...</li>
+        </ul>
+
+        <h2>9. Basic Syntax of C</h2>
+        <p>Comments: C supports single-line (<code>//</code>) and multi-line (<code>/* ... */</code>) comments...</p>
+        <p>A variable is a named storage location in memory...</p>
+
+        <h3>Example of Variable Declaration:</h3>
+        <pre><code>int age; // Declaration of an integer variable
+float salary; // Declaration of a float variable
+char initial; // Declaration of a character variable</code></pre>
+
+        <h2>10. Data Types in C</h2>
+        <p>C supports several data types:</p>
+        <ul>
+            <li><code>int</code>: Integer type (e.g., <code>int a = 10;</code>)</li>
+            <li><code>float</code>: Floating-point type (e.g., <code>float b = 5.5;</code>)</li>
+            <li><code>double</code>: Double precision floating-point (e.g., <code>double c = 10.75;</code>)</li>
+            <li><code>char</code>: Character type (e.g., <code>char d = 'A';</code>)</li>
+        </ul>
+
+        <h2>11. Control Flow Statements</h2>
+        <p>C provides various control flow statements to manage the execution of code blocks...</p>
+
+        <h3>If-Else Statement:</h3>
+        <pre><code>if (condition) {
+    // code to execute if condition is true
+} else {
+    // code to execute if condition is false
+}</code></pre>
+
+        <h3>Switch Statement:</h3>
+        <pre><code>switch (variable) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    default:
+        // default code
+}</code></pre>
+
+        <h3>Loops:</h3>
+        <h4>For Loop:</h4>
+        <pre><code>for (int i = 0; i < 10; i++) {
+    printf("%d\\n", i);
+}</code></pre>
+
+        <h4>While Loop:</h4>
+        <pre><code>int i = 0;
+while (i < 10) {
+    printf("%d\\n", i);
+    i++;
+}</code></pre>
+
+        <h2>12. Functions in C</h2>
+        <p>Functions are a block of code that performs a specific task and can be reused...</p>
+
+        <h3>Example of Function Declaration and Definition:</h3>
+        <pre><code>// Function declaration
+int add(int a, int b);
+
+int main() {
+    int result = add(5, 10);
+    printf("Sum: %d\\n", result);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+        <h2>Conclusion</h2>
+        <p>C is a powerful programming language that forms the basis for many modern languages and applications...</p>
+        <div class="navigation">
+            <!--<a href="c-introduction.html">Previous: Introduction to C Programming</a>->>
+            <!--<a href="index.html">Home</a>-->
+            <a href="c-data-types.html">Next: Data Types</a>
+        </div>
+    </section>
+</body>
+</html>

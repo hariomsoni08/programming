@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesAura</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function toggleChapters(element) {
+            // Find the chapters in the current tutorial
+            var clickedChapters = element.nextElementSibling;
+
+            // Hide all other chapters
+            var allChapters = document.querySelectorAll('.chapters');
+            allChapters.forEach(function(chapter) {
+                if (chapter !== clickedChapters) {
+                    chapter.style.display = "none";
+                }
+            });
+
+            // Toggle the current chapter
+            if (clickedChapters.style.display === "block") {
+                clickedChapters.style.display = "none";
+            } else {
+                clickedChapters.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="notes-aura-logo.png" alt="Logo" class="logo">
+            <h1><a href="index.html" style="color: inherit; text-decoration: none;">NotesAura - Programming Notes and Tutorials</a></h1>
+            <p style="font-family: 'Pacifico', cursive; font-size: 24px; color: #2E64FE; text-align: center;">Complete learning with us....</p>
+        </div>
+    </header>
+
+    <section class="tutorials">
+        <div class="tutorial">
+            <h2 onclick="toggleChapters(this)">C Programming Tutorials</h2>
+            <ul class="chapters" style="display: none;">
+                <li><a href="introduction-to-programming.html">Introduction to Programming</a></li>
+                <li><a href="c-introduction.html">Introduction to C</a></li>
+                <li><a href="c-features.html">Features of C</a></li>
+                <li><a href="c-program-structure.html">Basic Structure of C Program</a></li>
+                <li><a href="c-data-types.html">Data Types in C</a></li>
+                <li><a href="c-variables.html">Variables In C</a></li>
+                <li><a href="c-constant.html">C Constant</a></li>
+                <li><a href="c-type-casting.html">C Type Casting</a></li>
+                <li><a href="c-comments.html">Comments In C</a></li>
+                <li><a href="c-inputs-outputs.html">C Inputs and Outputs</a></li>
+                <li><a href="c-operators.html">Operators in C</a></li>
+                <li><a href="-control-statement.html">Control Statements in C</a></li>
+                <li><a href="c-looping.html">Looping In C</a></li>
+                <li><a href="c-string.html">C String</a></li>
+                <li><a href="c-array.html">Arrays In C</a></li>
+                <li><a href="c-function.html">Function In C</a></li>
+                <li><a href="c-pointer.html">Pointer In C</a></li>
+                <li><a href="c-structure.html">C Structure</a></li>
+                <li><a href="c-union.html">Union In C</a></li>
+                <li><a href="c-dynamic-memory-allocation.html">C Dynamic Memory Allocation</a></li>
+                <li><a href="c-file-handling.html">File Handling In C</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial">
+            <h2 onclick="toggleChapters(this)">Java Programming Tutorials</h2>
+            <ul class="chapters" style="display: none;">
+                <li><a href="java-introduction.html">Introduction to Java</a></li>
+                <li><a href="java-data-types.html">Data Types in Java</a></li>
+                <li><a href="java-control-structures.html">Control Structures in Java</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial">
+            <h2 onclick="toggleChapters(this)">Python Programming Tutorials</h2>
+            <ul class="chapters" style="display: none;">
+                <li><a href="python-introduction.html">Introduction to Python</a></li>
+                <li><a href="python-data-types.html">Data Types in Python</a></li>
+                <li><a href="python-control-structures.html">Control Structures in Python</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial">
+            <h2 onclick="toggleChapters(this)">HTML Tutorials</h2>
+            <ul class="chapters" style="display: none;">
+                <li><a href="html-introduction.html">Introduction to HTML</a></li>
+                <li><a href="html-tags.html">HTML Tags</a></li>
+                <li><a href="html-forms.html">HTML Forms</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Programming Notes. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://instagram.com/hariomsonihs" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/hariomsoni08" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/7667110195" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

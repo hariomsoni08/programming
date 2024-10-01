@@ -1,0 +1,188 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: #2a5298;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffc107;
+}
+
+/* Responsive Image */
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animation for header */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Tutorial Section Styles */
+section.tutorials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tutorial {
+    flex: 1 1 20%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: popIn 1s ease forwards;
+}
+
+.tutorial:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tutorial h2 {
+    font-size: 1.5em;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* List of Chapters */
+.chapters {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: none;
+}
+
+.chapters li {
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.chapters li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.chapters li a:hover {
+    color: #ffc107;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #2a5298;
+    border-radius: 10px;
+}
+
+footer p {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Social Media Styles */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ffc107;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    section.tutorials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tutorial {
+        flex: 1 1 80%;
+        margin: 15px 0;
+    }
+
+    .tutorial h2 {
+        font-size: 1.2em;
+    }
+
+    .chapters li a {
+        font-size: 1em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1em;
+    }
+
+    .tutorial {
+        flex: 1 1 90%;
+    }
+
+    .tutorial h2 {
+        font-size: 1em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+
+    .social-media a {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Data Types</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+
+        p, li {
+            color: #444;
+        }
+
+        pre {
+            background: #f8f8f8;
+            border-left: 4px solid #007bff;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            color: #c7254e;
+            background-color: #f9f2f4;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #2a5298;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            background-color: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>C Data Types</h1>
+    </header>
+
+    <section>
+        <h2>1. Basic Data Types</h2>
+        <h3>a. int</h3>
+        <p><strong>Definition</strong>: Represents integer values (whole numbers).</p>
+        <p><strong>Size</strong>: Typically 4 bytes (32 bits).</p>
+        <p><strong>Range</strong>: Signed: -2,147,483,648 to 2,147,483,647; Unsigned: 0 to 4,294,967,295.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>int num = 10; // Declaring an integer variable</code></pre>
+
+        <h3>b. float</h3>
+        <p><strong>Definition</strong>: Represents single-precision floating-point numbers.</p>
+        <p><strong>Size</strong>: Typically 4 bytes (32 bits).</p>
+        <p><strong>Range</strong>: Approximately -3.4E+38 to 3.4E+38.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>float price = 19.99f; // Declaring a float variable</code></pre>
+
+        <h3>c. double</h3>
+        <p><strong>Definition</strong>: Represents double-precision floating-point numbers.</p>
+        <p><strong>Size</strong>: Typically 8 bytes (64 bits).</p>
+        <p><strong>Range</strong>: Approximately -1.7E+308 to 1.7E+308.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>double pi = 3.14159; // Declaring a double variable</code></pre>
+
+        <h3>d. char</h3>
+        <p><strong>Definition</strong>: Represents single characters.</p>
+        <p><strong>Size</strong>: Typically 1 byte (8 bits).</p>
+        <p><strong>Range</strong>: Signed: -128 to 127; Unsigned: 0 to 255.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>char letter = 'A'; // Declaring a char variable</code></pre>
+
+        <h2>2. Derived Data Types</h2>
+
+        <h3>a. Array</h3>
+        <p><strong>Definition</strong>: A collection of elements of the same type, stored in contiguous memory locations.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>int numbers[5] = {1, 2, 3, 4, 5}; // Declaring an array of integers</code></pre>
+
+        <h3>b. Structure</h3>
+        <p><strong>Definition</strong>: A user-defined data type that allows grouping variables of different types.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>struct Person {
+    char name[50];
+    int age;
+};
+
+struct Person p1 = {"Alice", 30}; // Creating an instance of the structure</code></pre>
+
+        <h3>c. Union</h3>
+        <p><strong>Definition</strong>: A user-defined data type that allows storing different data types in the same memory location, but only one at a time.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>union Data {
+    int intVal;
+    float floatVal;
+    char charVal;
+};
+
+union Data data; // Declaring a union
+data.intVal = 10; // Only one member can hold a value at a time</code></pre>
+
+        <h3>d. Enumeration</h3>
+        <p><strong>Definition</strong>: A user-defined data type that consists of integral constants, allowing for named constants.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>enum Weekday {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+
+enum Weekday today = Wednesday; // Using enumeration</code></pre>
+
+        <h2>3. Void Data Type</h2>
+        <p><strong>Definition</strong>: Represents the absence of a value. It is used for functions that do not return a value.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>void functionName() {
+    // No return value
+}</code></pre>
+
+        <h2>4. Modifiers</h2>
+
+        <h3>a. signed</h3>
+        <p>Allows for both negative and positive values.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>signed int num = -10; // Signed integer</code></pre>
+
+        <h3>b. unsigned</h3>
+        <p>Only allows for positive values.</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>unsigned int num = 10; // Unsigned integer</code></pre>
+
+        <h3>c. short</h3>
+        <p>Represents a short integer (usually 2 bytes).</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>short int num = 1000; // Short integer</code></pre>
+
+        <h3>d. long</h3>
+        <p>Represents a long integer (usually 4 bytes or more).</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>long int num = 1000000; // Long integer</code></pre>
+
+        <h3>e. long long</h3>
+        <p>Represents a long long integer (typically 8 bytes).</p>
+        <p><strong>Syntax</strong>:</p>
+        <pre><code>long long int num = 123456789012345; // Long long integer</code></pre>
+
+        <h2>5. Example Program</h2>
+        <p>Here’s a simple program demonstrating the usage of various data types:</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+// Structure definition
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    // Basic data types
+    int age = 25;
+    float height = 5.9f;
+    double salary = 75000.50;
+    char initial = 'J';
+
+    // Structure usage
+    struct Person person1;
+    person1.age = age;
+    snprintf(person1.name, sizeof(person1.name), "John Doe");
+
+    // Output
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+    printf("Height: %.2f\n", height);
+    printf("Salary: %.2lf\n", salary);
+    printf("Initial: %c\n", initial);
+
+    // Array example
+    int numbers[5] = {1, 2, 3, 4, 5};
+    printf("Numbers: ");
+    for (int i = 0; i &lt; 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+
+        <div class="navigation">
+            <a href="c-introduction.html">Previous: Introduction to C Programming</a>
+            <a href="index.html">Home</a>
+            <a href="variables.html">Next: C Variables</a>
+        </div>
+    </section>
+</body>
+</html>
